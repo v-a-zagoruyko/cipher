@@ -90,7 +90,7 @@ const renderAlphabetTable = (shift) => {
   );
 };
 
-export const initCaesarCipher = () => {
+document.addEventListener("DOMContentLoaded", () => {
   renderAlphabetTable(0);
 
   const message = document.getElementById("cc-message");
@@ -115,4 +115,4 @@ export const initCaesarCipher = () => {
   document.getElementById(
     "cc-shift-help-text"
   ).innerText = `Максимальное значение ключа ${Number.MAX_SAFE_INTEGER}, а минимальное ${Number.MIN_SAFE_INTEGER}`;
-};
+});

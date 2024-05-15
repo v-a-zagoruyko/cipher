@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Исследование шифров: от Цезаря до RSA</title>
-  </head>
+  <link rel="stylesheet" href="styles/style.css" />
 
-  <body>
-    <section class="section">
-      <nav class="nav">
-        <a class="nav-link" href="./index.html">Главная</a>
-        <a class="nav-link" href="./caesar-cipher.html">Шифр Цезаря</a>
-        <a class="nav-link" href="./rsa.html">RSA</a>
-      </nav>
-    </section>
+  <title>Исследование шифров: RSA</title>
+</head>
 
-    <script src="scripts/script.js" type="module"></script>
-  </body>
+<body>
+  <section class="section">
+    <nav class="nav">
+      <a class="nav-link" href="./index.html">Главная</a>
+      <a class="nav-link" href="./caesar-cipher.html">Шифр Цезаря</a>
+      <a class="nav-link" href="./rsa.html">RSA</a>
+    </nav>
+
+    <h1 class="heading">RSA</h1>
+    <p class="text">
+      RSA (аббревиатура от фамилий Rivest, Shamir и Adleman) — криптографический алгоритм с открытым ключом,
+      основывающийся на вычислительной сложности задачи факторизации больших полупростых чисел.
+    </p>
+    <p class="text">
+      В отличии от симметричных алгоритмов шифрования, имеющих всего один ключ для шифрования и расшифровки информации,
+      в алгоритме RSA используется 2 ключа – открытый (публичный) и закрытый (приватный).
+    </p>
+    <p class="text">
+      Открытый, закрытые ключи и остальные перменные (генерируются заново при перезагрузке страницы):
+    </p>
+
+    <div>
+      <div class="equation-container">
+        <span class="equation">p&nbsp;=&nbsp;<span id="rsa-p-number"></span></span>
+      </div>
+      <div class="equation-container">
+        <span class="equation">q&nbsp;=&nbsp;<span id="rsa-q-number"></span></span>
+      </div>
+      <div class="equation-container">
+        <span class="equation">n&nbsp;=&nbsp;<span id="rsa-n-number"></span></span>
+      </div>
+      <div class="equation-container">
+        <span class="equation">f(N)&nbsp;=&nbsp;<span id="rsa-fn-number"></span></span>
+      </div>
+      <div class="equation-container">
+        <span class="equation">e&nbsp;=&nbsp;<span id="rsa-e-number"></span></span>
+      </div>
+      <div class="equation-container">
+        <span class="equation">d&nbsp;=&nbsp;<span id="rsa-d-number"></span></span>
+      </div>
+    </div>
+
+    <form action="" class="form">
+      <div class="form-group">
+        <label for="rsa-message" class="label">Сообщение:</label>
+        <textarea name="rsa-message" id="rsa-message" rows="5" class="textarea">Привет мир!</textarea>
+        <span class="help-text">Введите любое сообщение на русском или английском языке</span>
+      </div>
+      <div class="form-group">
+        <label for="rsa-ciphertext" class="label">Шифротекст:</label>
+        <textarea name="rsa-ciphertext" id="rsa-ciphertext" rows="20" class="textarea" readonly
+          disabled>Привет мир!</textarea>
+        <span class="help-text">Тут будет зашифрованный текст</span>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <span class="footer-text">Никита Бабанов, 2024</span>
+    </footer>
+  </section>
+
+  <script src="scripts/rsa.js" type="module"></script>
+</body>
+
 </html>

@@ -84,6 +84,16 @@ b::after {
   font-size: 13px;
 }
 
+.equation-container {
+  margin-top: 8px;
+}
+
+.equation {
+  font-size: 13px;
+  opacity: 0.6;
+  word-wrap: break-word;
+}
+
 .footer {
   text-align: center;
 }
