@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Исследование шифров: от Цезаря до RSA</title>
+</head>
+
+<body>
+    <section class="section">
+        <nav class="nav">
+            <a class="nav-link" href="./index.html">Главная</a>
+            <a class="nav-link" href="./caesar-cipher.html">Шифр Цезаря</a>
+            <a class="nav-link" href="./rsa.html">RSA</a>
+        </nav>
+
+        <h1 class="heading">Шифр Цезаря</h1>
+        <p class="text">
+            Шифр Цезаря – это один из самых простых и известных методов шифрования. Его название связано с римским
+            императором Цезарем, который, по преданию, использовал этот метод для обмена сообщениями со своими
+            генералами. Давайте рассмотрим основные принципы этого шифра:
+        </p>
+        <ol class="list">
+            <li class="list-text"><b>Замена букв:</b>В шифре Цезаря каждая буква в сообщении заменяется на букву,
+                находящуюся
+                на некотором постоянном расстоянии вперед или назад в алфавите.</li>
+            <li class="list-text"><b>Сдвиг:</b>Для шифрования и дешифрования сообщения необходимо знать величину сдвига
+                (ключ). Если злоумышленник не знает этого значения, ему будет сложно восстановить исходное сообщение.
+            </li>
+        </ol>
+
+        <p class="text">
+            Наглядное изображение алфавитов со сдвигом: <span id="cc-shift-text">0</span>
+        </p>
+        <div class="table-container">
+            <table class="table">
+                <tbody id="cc-alphabet">
+                </tbody>
+            </table>
+        </div>
+
+        <form action="" class="form">
+            <div class="form-group">
+                <label for="cc-message" class="label">Сообщение:</label>
+                <textarea name="cc-message" id="cc-message" rows="5" class="textarea">Привет мир!</textarea>
+                <span class="help-text">Введите любое сообщение на русском или английском языке</span>
+            </div>
+            <div class="form-group">
+                <label for="cc-shift" class="label">Сдвиг:</label>
+                <input name="cc-shift" id="cc-shift" type="text" inputmode="tel" class="input" value="0" />
+                <span id="cc-shift-help-text" class="help-text"></span>
+            </div>
+            <div class="form-group">
+                <label for="cc-ciphertext" class="label">Шифротекст:</label>
+                <textarea name="cc-ciphertext" id="cc-ciphertext" rows="5" class="textarea">Привет мир!</textarea>
+                <span class="help-text">Тут будет зашифрованный текст</span>
+            </div>
+        </form>
+
+        <footer class="footer">
+            <span class="footer-text">Никита Бабанов, 2024</span>
+        </footer>
+    </section>
+
+    <script src="scripts/script.js" type="module"></script>
+</body>
+
+</html>

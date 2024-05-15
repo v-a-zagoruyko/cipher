@@ -1,0 +1,94 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 8px 12px;
+  resize: vertical;
+}
+
+.section {
+  margin: 0 auto;
+  padding: 24px 32px;
+  max-width: 1350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  column-gap: 12px;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.heading {
+  font-size: 20px;
+}
+
+b::after {
+  content: " ";
+}
+
+.text {
+  margin-bottom: 0;
+}
+
+.list {
+  list-style-position: inside;
+}
+
+.list-text {
+  margin-bottom: 12px;
+}
+
+.table {
+  margin-top: 8px;
+  overflow-x: auto;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  display: block;
+}
+
+.table td {
+  min-width: 30px;
+  width: 30px;
+  font-weight: 600;
+}
+
+.help-text {
+  opacity: 0.6;
+  font-size: 13px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer-text {
+  opacity: 0.6;
+  font-size: 13px;
+}
