@@ -34,24 +34,18 @@ const encode = async (message, keys) => {
 
 document.addEventListener("DOMContentLoaded", async () => {
   const keys = await generateKey();
-  const exportedKey = await exportKey(keys.privateKey);
+  const { p, q, n, qi, e, d } = await exportKey(keys.privateKey);
   document.getElementById("rsa-ciphertext").value = await encode(
     document.getElementById("rsa-message").value,
     keys
   );
 
-  const p = document.getElementById("rsa-p-number");
-  const q = document.getElementById("rsa-q-number");
-  const n = document.getElementById("rsa-n-number");
-  const fn = document.getElementById("rsa-fn-number");
-  const e = document.getElementById("rsa-e-number");
-  const d = document.getElementById("rsa-d-number");
-  p.innerText = exportedKey.p;
-  q.innerText = exportedKey.q;
-  n.innerText = exportedKey.n;
-  fn.innerText = exportedKey.qi;
-  e.innerText = exportedKey.e;
-  d.innerText = exportedKey.d;
+  document.getElementById("rsa-p-number").innerText = p;
+  document.getElementById("rsa-q-number").innerText = q;
+  document.getElementById("rsa-n-number").innerText = n;
+  document.getElementById("rsa-fn-number").innerText = qi;
+  document.getElementById("rsa-e-number").innerText = e;
+  document.getElementById("rsa-d-number").innerText = d;
 
   const message = document.getElementById("rsa-message");
   const ciphertext = document.getElementById("rsa-ciphertext");
