@@ -15,7 +15,7 @@ const caesarCipher = (message, shift) =>
     let nextIndex = alphabet.indexOf(c) + getSafeIntegerFromText(shift);
     nextIndex =
       nextIndex < 0
-        ? alphabet.length - (Math.abs(nextIndex) % alphabet.length)
+        ? alphabet.length - (Math.abs(nextIndex) % alphabet.length) - 1
         : nextIndex % alphabet.length;
 
     return acc + alphabet[nextIndex];
